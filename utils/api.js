@@ -2,10 +2,10 @@
 import Promise from './es6-promise.min'
 
 module.exports = {
-  PAGE_WORK: 'category',
-  
   HOST: 'https://www.wandianshenme.com/api/',
   HOST_STATIC: 'https://www.wandianshenme.com/static/media/',
+  HOST_PLAY: 'https://www.wandianshenme.com/api/play/',
+
   HOST_WORK: 'https://www.wandianshenme.com/api/',
   HOST_HEAD: 'https://www.wandianshenme.com/api/',
   HOT: 'home',

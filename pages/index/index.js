@@ -30,11 +30,8 @@ Page({
   },
 
   onItemClick (e) {
-    var targetUrl = api.PAGE_WORK
-    if (e.currentTarget.dataset.rowId != null)
-      targetUrl = targetUrl + '?rowId=' + e.currentTarget.dataset.rowId
     wx.navigateTo({
-      url: targetUrl
+      url: '/pages/work-detail/work-detail?rowId=' + e.currentTarget.dataset.rowId
     })
   },
 
