@@ -2,19 +2,21 @@
 import Promise from './es6-promise.min'
 
 module.exports = {
-  PAGE_WORK: '/pages/work-detail/work-detail',
-
-  HOST_WORK: 'http://work.artand.cn/',
-  HOST_HEAD: 'http://head.artand.cn/',
-  HOST_IOS: 'http://ios1.artand.cn/',
-  HOT: 'discover/work/hot',
-  LATEST: 'discover/work/new',
+  PAGE_WORK: 'category',
+  
+  HOST: 'https://www.wandianshenme.com/api/',
+  HOST_STATIC: 'https://www.wandianshenme.com/static/media/',
+  HOST_WORK: 'https://www.wandianshenme.com/api/',
+  HOST_HEAD: 'https://www.wandianshenme.com/api/',
+  HOT: 'home',
+  HOME: 'home',
+  LATEST: 'home',
 
   SWIPERS: 'http://ios1.artand.cn/discover/home/rank',
 
-  SIGN_UP: 'http://ios1.artand.cn/signup/sms',
-  LOGIN: 'http://ios1.artand.cn/login/doLogin',
-  GET_VERIFICATION: 'http://ios1.artand.cn/signup/sms',
+  SIGN_UP: 'https://www.wandianshenme.com/api/auth/',
+  LOGIN: 'https://www.wandianshenme.com/api/auth/',
+  GET_VERIFICATION: 'https://www.wandianshenme.com/',
 
   get (url) {
     return new Promise((resolve, reject) => {
