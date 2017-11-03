@@ -1,7 +1,7 @@
 <import src="../../wxParse/wxParse.wxml"/>
 
-<view>
-  <image src="{{_api.HOST_STATIC+data.featured_image}}"
+<view class="detail-container">
+  <image wx:if="{{data && data.featured_image}}" src="{{_api.HOST_STATIC+data.featured_image}}"
     style="width:{{systemInfo.windowWidth}}px;height:{{systemInfo.windowWidth*item.h/item.w}}px" mode="aspectFit">
   </image>
   <view class="vol-meta">
