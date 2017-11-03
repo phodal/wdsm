@@ -1,4 +1,6 @@
 /**app.wxss**/
+@import "/wxParse/wxParse.wxss";
+
 page {
   height: 100%;
 }

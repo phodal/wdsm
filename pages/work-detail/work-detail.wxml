@@ -1,3 +1,5 @@
+<import src="../../wxParse/wxParse.wxml"/>
+
 <view>
   <image src="{{_api.HOST_STATIC+data.featured_image}}"
     style="width:{{systemInfo.windowWidth}}px;height:{{systemInfo.windowWidth*item.h/item.w}}px" mode="aspectFit">
@@ -8,7 +10,5 @@
   <view class="vol-meta">
     <text class="vol-number">{{data.user}}</text>
   </view>
-  <view class="vol-content">
-    <text class="vol-content-text">{{data.content}}</text>
-  </view>
+  <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
 </view>
