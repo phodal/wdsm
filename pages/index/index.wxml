@@ -7,49 +7,49 @@
 <!-- 最火 -->
 <scroll-view class="latest-item-container {{currentNavbar==0 ? '' : 'hidden'}}" style="height: {{systemInfo.windowHeight}}px;" scroll-y="true">
   <block wx:for="{{data.new}}" wx:for-index="idx">
-    <image src="{{_api.HOST_STATIC+data.new[idx].featured_image}}" class="latest-image" data-row-id="{{data.new[idx].id}}" bindtap="onItemClick" mode="aspectFit">
-    </image>
-    <view class="vol-meta">
-      <text class="vol-title">{{item.title}}</text>
-    </view>
-    <view class="vol-meta">
-      <text class="vol-number">{{item.user}}</text>
-    </view>
-    <view class="vol-content">
-      <text class="vol-content-text">{{item.description}}</text>
+    <view data-row-id="{{data.new[idx].id}}" bindtap="onItemClick">
+      <view class="vol-meta">
+        <text class="vol-title">{{item.title}}</text>
+      </view>
+      <view class="vol-meta">
+        <text class="vol-number">{{item.user}}</text>
+      </view>
+      <view class="vol-content">
+        <text class="vol-content-text">{{item.description}}</text>
+      </view>
     </view>
   </block>
 </scroll-view>
 
 <scroll-view class="latest-item-container {{currentNavbar==1 ? '' : 'hidden'}}" style="height: {{systemInfo.windowHeight}}px;" scroll-y="true">
-  <block wx:for="{{data.hot}}" wx:for-index="idx">
-    <image src="{{_api.HOST_STATIC+data.hot[idx].featured_image}}" class="latest-image" data-row-id="{{data.new[idx].id}}" bindtap="onItemClick" mode="aspectFit">
-    </image>
-    <view class="vol-meta">
-      <text class="vol-title">{{item.title}}</text>
-    </view>
-    <view class="vol-meta">
-      <text class="vol-number">{{item.user}}</text>
-    </view>
-    <view class="vol-content">
-      <text class="vol-content-text">{{item.description}}</text>
-    </view>
+  <block wx:for="{{data.hot}}" wx:for-index="idx" bindtap="onItemClick">
+    <view data-row-id="{{data.new[idx].id}}" bindtap="onItemClick">
+      <view class="vol-meta">
+        <text class="vol-title">{{item.title}}</text>
+      </view>
+      <view class="vol-meta">
+        <text class="vol-number">{{item.user}}</text>
+      </view>
+      <view class="vol-content">
+        <text class="vol-content-text">{{item.description}}</text>
+      </view>
+      </view>
   </block>
 </scroll-view>
 
 <!-- 最火 -->
 <scroll-view class="latest-item-container {{currentNavbar==2 ? '' : 'hidden'}}" style="height: {{systemInfo.windowHeight}}px;" scroll-y="true">
-  <block wx:for="{{data.top}}" wx:for-index="idx">
-    <image src="{{_api.HOST_STATIC+data.top[idx].featured_image}}" class="latest-image" data-row-id="{{data.new[idx].id}}" bindtap="onItemClick" mode="aspectFit">
-    </image>
-    <view class="vol-meta">
-      <text class="vol-title">{{item.title}}</text>
-    </view>
-    <view class="vol-meta">
-      <text class="vol-number">{{item.user}}</text>
-    </view>
-    <view class="vol-content">
-      <text class="vol-content-text">{{item.description}}</text>
+  <block wx:for="{{data.top}}" wx:for-index="idx" bindtap="onItemClick">
+    <view data-row-id="{{data.new[idx].id}}" bindtap="onItemClick">
+      <view class="vol-meta">
+        <text class="vol-title">{{item.title}}</text>
+      </view>
+      <view class="vol-meta">
+        <text class="vol-number">{{item.user}}</text>
+      </view>
+      <view class="vol-content">
+        <text class="vol-content-text">{{item.description}}</text>
+      </view>
     </view>
   </block>
 </scroll-view>
