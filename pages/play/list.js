@@ -30,12 +30,6 @@ Page({
     })
   },
 
-  switchNav(e) {
-    this.setData({
-      currentNavbar: e.currentTarget.dataset.idx
-    });
-  },
-
   onPullDownRefresh() {
     wx.showNavigationBarLoading();
     api.get(api.HOST_PLAY)
@@ -50,17 +44,15 @@ Page({
   },
 
   onReachBottom() {
-    console.log("------")
     wx.showNavigationBarLoading();
-    console.log(this.data)
-    if (this.data.nextUrl) {
-      api.get(api.HOST_PLAY)
+    if (!!this.data.nextUrl) {
+      api.get(this.data.nextUrl)
         .then(res => {
+          wx.hideNavigationBarLoading();
           this.setData({
-            data: this.data.concat(res.data.results),
+            data: this.data.data.concat(res.data.results),
             nextUrl: res.data.next
           });
-          wx.hideNavigationBarLoading();
         })
     }
   }
