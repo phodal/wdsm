@@ -83,6 +83,7 @@ view{
 }
 
 .wxParse-p{
+    padding:5rpx 0;
     font-size: 28rpx;
 }
 
@@ -102,10 +103,11 @@ view{
 
 .wxParse-blockquote {
     margin: 0;
-    padding:10px 0 10px 5px;
+    padding: 10rpx 0 10rpx 5rpx;
     font-family:Courier, Calibri,"宋体";
     background:#f5f5f5;
     border-left: 3px solid #dbdbdb;
+    margin-bottom:10rpx;
 }
 
 .wxParse-pre .wxParse-code {
@@ -125,8 +127,8 @@ view{
 
 .wxParse-wxxxcode-style .wxParse-inline {
     color: #c7254e;
-    white-space: nowrap;
-    background-color: #f9f2f4;
+    white-space:pre-wrap;
+    background-color: #f8f8f8;
     border-radius: 4px;
     margin: 1em 0;
 }
@@ -144,10 +146,11 @@ view{
 .wxParse-li,.wxParse-li-inner{
     display: flex;
     align-items: baseline;
-    margin: 10rpx 0;
+    margin:4rpx 0;
+    font-size:24rpx;
 }
+
 .wxParse-li-text{
-    
     align-items: center;
     line-height: 20px;
 }
