@@ -1,5 +1,5 @@
 <view class="section">
-  <view wx:for="{{imgList}}">
+  <view wx:for="{{imgList}}" wx:key="idx" wx:for-index="idx">
     <image src="{{item}}" class="discover-image"
       style="width:{{systemInfo.windowWidth-20}}px;height: {{(systemInfo.windowWidth-20)/2.742}}px;">
     </image>

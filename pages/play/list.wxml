@@ -1,6 +1,6 @@
 <scroll-view class="latest-item-container" style="height: {{systemInfo.windowHeight}}px;" scroll-y="true">
-  <block wx:for="{{data.results}}" wx:for-index="idx">
-    <view data-row-id="{{data.results[idx].id}}" bindtap="onItemClick" class="play-item">
+  <block wx:for="{{data}}" wx:key="idx" wx:for-index="idx">
+    <view data-row-id="{{data[idx].id}}" bindtap="onItemClick" class="play-item">
       <view class="vol-meta">
         <text class="vol-title">{{item.title}}</text>
       </view>

@@ -5,7 +5,8 @@ Page({
   data: {
     systemInfo: {},
     _api: {},
-    list: []
+    list: [],
+    nextUrl: ''
   },
 
   onLoad() {
@@ -40,10 +41,27 @@ Page({
     api.get(api.HOST_PLAY)
       .then(res => {
         this.setData({
-          data: res.data
+          data: res.data.results,
+          nextUrl: res.data.next
         });
         wx.hideNavigationBarLoading();
         wx.stopPullDownRefresh()
       })
+  },
+
+  onReachBottom() {
+    console.log("------")
+    wx.showNavigationBarLoading();
+    console.log(this.data)
+    if (this.data.nextUrl) {
+      api.get(api.HOST_PLAY)
+        .then(res => {
+          this.setData({
+            data: this.data.concat(res.data.results),
+            nextUrl: res.data.next
+          });
+          wx.hideNavigationBarLoading();
+        })
+    }
   }
 });
