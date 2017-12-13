@@ -1,13 +1,6 @@
 .container {
     background: #eee;
     background-size: cover;
-    background-image: url(/images/bg.png);
-}
-.avatar {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-top: 40px;
 }
 
 .section {
@@ -31,10 +24,6 @@
 .icon {
     width: 25px;
     height: 25px;
-}
-.pay-text {
-    line-height: 25px;
-    margin-left: 5px;
 }
 
 .login {

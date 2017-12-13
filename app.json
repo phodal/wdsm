@@ -5,8 +5,7 @@
     "pages/discover/discover",
     "pages/setting/setting",
     "pages/login/login",
-    "pages/register/register",
-    "pages/qrcode/qrcode"
+    "pages/register/register"
   ],
   "window":{
     "backgroundTextStyle": "dark",
