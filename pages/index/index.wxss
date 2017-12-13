@@ -37,7 +37,7 @@
 }
 
 .vol-title {
-  font-size: 16px;
+  font-size: 14px;
   color: #1abc9c;
 }
 
@@ -55,4 +55,13 @@
 .vol-content-text {
   width: 100%;
   color: #384452;
+}
+
+.play-item {
+  border:1px solid #eee;
+  margin:10rpx 20rpx 20rpx 20rpx;
+  border-radius:20rpx;
+  box-shadow:0rpx 2rpx 0rpx 1rpx;
+  color:#eee;
+  padding:6rpx;
 }
