@@ -147,19 +147,18 @@ view{
     display: flex;
     align-items: baseline;
     margin:4rpx 0;
-    font-size:24rpx;
 }
 
 .wxParse-li-text{
     align-items: center;
-    line-height: 28px;
+    font-size:24rpx;
 }
 
 .wxParse-li-circle{
     display: inline-flex;
     width: 5px;
     height: 5px;
-    background-color: #333;
+    background-color: #1abc9c;
     margin-right: 5px;
 }
 
@@ -167,7 +166,7 @@ view{
     display: inline-flex;
     width: 10rpx;
     height: 10rpx;
-    background-color: #333;
+    background-color: #1abc9c;
     margin-right: 5px;
 }
 .wxParse-li-ring{
@@ -176,7 +175,7 @@ view{
     height: 10rpx;
     border: 2rpx solid #333;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: #1abc9c;
     margin-right: 5px;
 }
 
