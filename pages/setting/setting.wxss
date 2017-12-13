@@ -1,5 +1,5 @@
 .container {
-    background: #eee;
+    background: #fff;
     background-size: cover;
 }
 
@@ -31,7 +31,7 @@
     height: 36px;
     line-height: 36px;
     font-size: 14px;
-    background: transparent;
-    border: 1px solid #fff;
+    background: #384452;
+    border: 1px solid transparent;
     color: #fff;
 }
