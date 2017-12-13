@@ -15,24 +15,31 @@
     "enablePullDownRefresh": true
   },
   "tabBar": {
-    "color": "#ddd",
-    "position": "top",
+    "color": "white",
     "backgroundColor": "#384452",
     "borderStyle": "black",
-    "selectedColor": "#fff",
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "首页"
+        "iconPath": "images/bar_home_black.png",
+        "selectedIconPath": "images/bar_home.png"
       },
       {
         "pagePath": "pages/play/list",
-        "text": "玩法"
+        "iconPath": "images/bar_explore_black.png",
+        "selectedIconPath": "images/bar_explore.png"
       },
       {
         "pagePath": "pages/discover/discover",
-        "text": "发现"
-      }]
+        "iconPath": "images/bar_explore_black.png",
+        "selectedIconPath": "images/bar_explore.png"
+      },
+      {
+        "pagePath": "pages/setting/setting",
+        "iconPath": "images/bar_mine_black.png",
+        "selectedIconPath": "images/bar_mine.png"
+      }
+    ]
   },
   "debug": true
 }

@@ -1,3 +1,6 @@
 {
-  "navigationBarTitleText": "玩法"
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "white",
+  "navigationBarTitleText": "玩法",
+  "navigationBarTextStyle": "black"
 }
