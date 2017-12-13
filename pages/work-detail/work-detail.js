@@ -28,8 +28,20 @@ Page({
     } else {
       api.get(`${api.HOST_PLAY}${options.rowId}`)
         .then(res => {
+          function formatDate(date) {
+            var d = new Date(date),
+              month = '' + (d.getMonth() + 1),
+              day = '' + d.getDate(),
+              year = d.getFullYear();
+
+            if (month.length < 2) month = '0' + month;
+            if (day.length < 2) day = '0' + day;
+
+            return [year, month, day].join('-');
+          }
           that.setData({
-            data: res.data
+            data: res.data,
+            publishDate: formatDate(res.data.updated)
           });
           var html = converter.makeHtml(res.data.content);
           WxParse.wxParse('article', 'html', html, that, 5);

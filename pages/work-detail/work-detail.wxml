@@ -9,6 +9,7 @@
     </view>
     <view class="vol-meta">
       <text class="vol-number">{{data.user}}</text>
+      <text class="vol-number">  {{publishDate}}</text>
     </view>
     <view class="vol-meta">
       <template is="wxParse" data="{{wxParseData:article.nodes}}" />
