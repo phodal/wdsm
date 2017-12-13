@@ -1,14 +1,17 @@
-<import src="../../wxParse/wxParse.wxml"/>
+<import src="../../wxParse/wxParse.wxml" />
 
 <view class="detail-container">
-  <image wx:if="{{data && data.featured_image}}" src="{{_api.HOST_STATIC+data.featured_image}}"
-    style="width:{{systemInfo.windowWidth}}px;height:{{systemInfo.windowWidth*item.h/item.w}}px" mode="aspectFit">
-  </image>
-  <view class="vol-meta">
-    <text class="vol-title">{{data.title}}</text>
+  <view class="play-detail">
+    <image wx:if="{{data && data.featured_image}}" src="{{_api.HOST_STATIC+data.featured_image}}" style="width:{{systemInfo.windowWidth}}px;height:{{systemInfo.windowWidth*item.h/item.w}}px" mode="aspectFit">
+    </image>
+    <view class="vol-meta">
+      <text class="vol-title">{{data.title}}</text>
+    </view>
+    <view class="vol-meta">
+      <text class="vol-number">{{data.user}}</text>
+    </view>
+    <view class="vol-meta">
+      <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+    </view>
   </view>
-  <view class="vol-meta">
-    <text class="vol-number">{{data.user}}</text>
-  </view>
-  <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
 </view>

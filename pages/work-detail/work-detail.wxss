@@ -1,3 +1,3 @@
 .detail-container {
-  margin: 0 10rpx;
+ background: #fff;
 }
