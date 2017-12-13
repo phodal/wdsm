@@ -9,9 +9,9 @@
   ],
   "window": {
     "backgroundTextStyle": "dark",
-    "navigationBarBackgroundColor": "white",
+    "navigationBarBackgroundColor": "#384452",
     "navigationBarTitleText": "玩点什么",
-    "navigationBarTextStyle": "black",
+    "navigationBarTextStyle": "white",
     "enablePullDownRefresh": true
   },
   "tabBar": {
