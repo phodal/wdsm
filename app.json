@@ -4,8 +4,7 @@
     "pages/work-detail/work-detail",
     "pages/discover/discover",
     "pages/setting/setting",
-    "pages/login/login",
-    "pages/register/register"
+    "pages/login/login"
   ],
   "window":{
     "backgroundTextStyle": "dark",

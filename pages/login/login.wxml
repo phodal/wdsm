@@ -10,8 +10,5 @@
       <button formType="submit" size="mini" plain="true" class="login-btn"
         hover-class="other-button-hover" hover-class="btn-hover"> 登 录 </button>
     </view>
-    <view>
-      <navigator url="/pages/register/register" redirect class="register">30秒快速注册</navigator>
-    </view>
   </form>
 </view>
