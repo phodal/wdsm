@@ -46,6 +46,8 @@ Page({
 
   onReachBottom() {
     wx.showNavigationBarLoading();
+    console.log("-----");
+    console.log(this.data.nextUrl);
     if (!!this.data.nextUrl) {
       this.setData({
         isHideLoadMore: false
