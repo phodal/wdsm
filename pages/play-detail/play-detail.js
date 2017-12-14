@@ -45,7 +45,9 @@ Page({
             data: res.data,
             publishDate: formatDate(res.data.updated)
           });
-          let html = converter.makeHtml(res.data.content);
+          let text = res.data.content.replace(/\/static\/media\/uploads\//g,
+            `${api.HOST_STATIC}uploads/`);
+          let html = converter.makeHtml(text);
           WxParse.wxParse('article', 'html', html, that, 5);
         });
     }
