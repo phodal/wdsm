@@ -22,6 +22,9 @@ Page({
     if(options && options.category) {
         defaultUrl = `${api.HOST_PLAY}?category=${options.category}`;
     }
+    if(options && options.keyword) {
+        defaultUrl = `${api.HOST_PLAY}?title=${options.keyword}`;
+    }
 
     if(options && options.title) {
       wx.setNavigationBarTitle({

@@ -13,7 +13,7 @@ Page({
     WxSearch.initMindKeys(this.data.keywords);
   },
   onItemClick(e) {
-    
+
   },
   wxSearchFn: function (e) {
     let that = this;
@@ -37,7 +37,7 @@ Page({
     WxSearch.wxSearchKeyTap(e, that);
     let keyword = e.target.dataset.key;
     wx.navigateTo({
-        url: '/pages/play-detail/play-detail?url=' + api.HOST_SEARCH + keyword
+        url: '/pages/list/list?keyword=' + keyword
     })
     console.log('wxSearchKeyTap:' + JSON.stringify(keyword));
   },
