@@ -15,4 +15,18 @@
       <template is="wxParse" data="{{wxParseData:article.nodes}}" />
     </view>
   </view>
+
+  <view class="related">
+    <view class="related-text">
+      <text>相关玩法</text>
+    </view>
+
+    <block wx:for="{{data.related_posts}}" wx:key="idx" wx:for-index="idx" bindtap="onItemClick">
+      <view data-row-id="{{data.related_posts[idx].id}}" bindtap="onItemClick">
+        <view class="vol-meta">
+          <text class="vol-title related-play-title">{{item.title}}</text>
+        </view>
+      </view>
+    </block>
+    </view>
 </view>

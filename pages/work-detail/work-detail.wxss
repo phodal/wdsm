@@ -1,3 +1,13 @@
 .detail-container {
  background: #fff;
 }
+
+.related-text {
+  font-size: 36rpx;
+  border-bottom: 1px solid rgba(0,0,0,.15)!important;
+  padding: 10px;
+}
+
+.related-play-title {
+  font-size: 32rpx;
+}

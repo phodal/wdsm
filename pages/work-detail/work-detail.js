@@ -49,6 +49,11 @@ Page({
     }
   },
 
+  onItemClick(e) {
+    wx.navigateTo({
+      url: '/pages/work-detail/work-detail?rowId=' + e.currentTarget.dataset.rowId
+    })
+  },
   onPullDownRefresh () {
     wx.stopPullDownRefresh()
   }
