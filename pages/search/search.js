@@ -9,7 +9,7 @@ Page({
   onLoad() {
     var that = this;
 
-    WxSearch.init(that, 43, ['精选', '智能家居', 'AI', '智能音箱', '物联网', '自动驾驶']);
+    WxSearch.init(that, 43, ['精选', '智能家居', 'AI', '智能音箱', '物联网', '自动驾驶']);
     WxSearch.initMindKeys(this.data.keywords);
   },
   onItemClick(e) {
@@ -17,8 +17,9 @@ Page({
   },
   wxSearchFn: function (e) {
     let that = this;
-    console.log('wxSearchFn:' + e);
     WxSearch.wxSearchAddHisKey(that);
+    let keyword = e.target.dataset.key;
+    this.searchByKeywords(keyword);
   },
   wxSearchInput: function (e) {
     let that = this;
@@ -36,10 +37,7 @@ Page({
     let that = this;
     WxSearch.wxSearchKeyTap(e, that);
     let keyword = e.target.dataset.key;
-    wx.navigateTo({
-        url: '/pages/list/list?keyword=' + keyword
-    })
-    console.log('wxSearchKeyTap:' + JSON.stringify(keyword));
+    this.searchByKeywords(keyword);
   },
   wxSearchDeleteKey: function (e) {
     let that = this;
@@ -52,5 +50,20 @@ Page({
   wxSearchTap: function (e) {
     let that = this;
     WxSearch.wxSearchHiddenPancel(that);
-  }
+  },
+  clearInput: function() {
+    let originSearchData = this.data.wxSearchData;
+    console.log(this.data.wxSearchData)
+    originSearchData.value = ''
+    originSearchData.mindKeys = []
+    this.setData({
+      wxSearchData: originSearchData
+    })
+  },
+  searchByKeywords: function (keyword) {
+    wx.navigateTo({
+      url: '/pages/list/list?keyword=' + keyword
+    })
+    console.log('wxSearchKeyTap:' + JSON.stringify(keyword));
+  },
 });
