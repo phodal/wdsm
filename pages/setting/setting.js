@@ -10,9 +10,5 @@ Page({
     wx.navigateTo({
       url: '/pages/login/login'
     })
-  },
-
-  onPullDownRefresh () {
-    wx.stopPullDownRefresh()
   }
 })

@@ -5,7 +5,8 @@
     "pages/discover/discover",
     "pages/setting/setting",
     "pages/login/login",
-    "pages/play/list"
+    "pages/play/list",
+    "pages/search/search"
   ],
   "window": {
     "backgroundTextStyle": "dark",

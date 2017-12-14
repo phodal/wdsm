@@ -2,5 +2,6 @@
     "backgroundTextStyle":"dark",
     "navigationBarBackgroundColor": "#384452",
     "navigationBarTitleText": "个人主页",
-    "navigationBarTextStyle":"white"
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh": false
 }
