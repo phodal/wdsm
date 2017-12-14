@@ -1,36 +1,44 @@
-var api = require('../../utils/api.js')
+var api = require('../../utils/api.js');
 var app = getApp()
 Page({
   data: {
     systemInfo: {},
     _api: {},
-    imgList: [
-      '/images/discover/image_artist@2x.png',
-      '/images/discover/dailySelection@2x.png',
-      '/images/discover/image_fans@2x.png',
-    ],
-    imgListTwo: [
-      [
-        '/images/discover/image_preson@2x.png',
-        '/images/discover/image_read@2x.png'
-      ],
-      [
-        '/images/discover/image_collect@2x.png',
-        '/images/discover/image_appreciate@2x.png'
-      ]
-    ]
+    loading: true,
   },
 
-  onLoad: function (options) {
-    var that = this
+  onLoad: function () {
+    let that = this;
     app.getSystemInfo(function(res) {
       that.setData({
         systemInfo: res
       })
-    })
+    });
 
     that.setData({
       _api: api
+    });
+
+    this.onPullDownRefresh()
+  },
+
+  onPullDownRefresh() {
+    wx.showNavigationBarLoading();
+    api.get(`${api.HOST}${api.CATEGORY}`)
+      .then(res => {
+        this.setData({
+          category: res.data.results,
+          loading: false
+        });
+        wx.hideNavigationBarLoading();
+        wx.stopPullDownRefresh()
+      })
+  },
+
+  onItemClick(e) {
+    let categoryUrl = e.currentTarget.dataset.slug;
+    wx.navigateTo({
+      url: '/pages/list/list?url=' + `${api.HOST_PLAY}?category=${categoryUrl}`
     })
-  }
+  },
 })

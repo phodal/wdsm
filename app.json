@@ -1,4 +1,3 @@
-
 {
   "pages": [
     "pages/index/index",
@@ -6,8 +5,9 @@
     "pages/discover/discover",
     "pages/setting/setting",
     "pages/login/login",
-    "pages/play/list",
-    "pages/search/search"
+    "pages/play/play",
+    "pages/search/search",
+    "pages/list/list"
   ],
   "window": {
     "backgroundTextStyle": "dark",

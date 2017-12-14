@@ -1,11 +1,9 @@
 .section {
     margin-top: 20rpx;
+    text-align:center;
+    font-size:36rpx;
+    color:#1abc9c;
 }
-.discover-image {
-    display: flex;
+.keyword {
     margin-bottom: 10px;
-}
-.discover-image-two {
-    display: flex;
-    justify-content: space-between;
 }
