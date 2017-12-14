@@ -17,35 +17,38 @@ Page({
     
   },
   wxSearchFn: function (e) {
-    var that = this
+    let that = this;
+    console.log('wxSearchFn:' + e);
     WxSearch.wxSearchAddHisKey(that);
   },
   wxSearchInput: function (e) {
-    var that = this
+    let that = this;
     WxSearch.wxSearchInput(e, that);
   },
   wxSerchFocus: function (e) {
-    var that = this
+    let that = this;
     WxSearch.wxSearchFocus(e, that);
   },
   wxSearchBlur: function (e) {
-    var that = this
+    let that = this;
     WxSearch.wxSearchBlur(e, that);
   },
   wxSearchKeyTap: function (e) {
-    var that = this
+    let that = this;
     WxSearch.wxSearchKeyTap(e, that);
+    let keyword = e.target.dataset.key;
+    console.log('wxSearchKeyTap:' + JSON.stringify(keyword));
   },
   wxSearchDeleteKey: function (e) {
-    var that = this
+    let that = this;
     WxSearch.wxSearchDeleteKey(e, that);
   },
   wxSearchDeleteAll: function (e) {
-    var that = this;
+    let that = this;
     WxSearch.wxSearchDeleteAll(that);
   },
   wxSearchTap: function (e) {
-    var that = this
+    let that = this;
     WxSearch.wxSearchHiddenPancel(that);
   }
 });
