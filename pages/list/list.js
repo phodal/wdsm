@@ -6,7 +6,7 @@ Page({
     systemInfo: {},
     _api: {},
     list: [],
-    isHideLoadMore: false,
+    loading: false,
     nextUrl: ''
   },
 
@@ -48,11 +48,15 @@ Page({
 
   onPullDownRefresh() {
     wx.showNavigationBarLoading();
-      api.get(this.data.defaultUrl)
+    this.setData({
+      loading: true
+    })
+    api.get(this.data.defaultUrl)
       .then(res => {
         this.setData({
           data: res.data.results,
-          nextUrl: res.data.next
+          nextUrl: res.data.next,
+          loading: false
         });
         wx.hideNavigationBarLoading();
         wx.stopPullDownRefresh()
@@ -63,7 +67,7 @@ Page({
     wx.showNavigationBarLoading();
     if (!!this.data.nextUrl) {
       this.setData({
-        isHideLoadMore: false
+        loading: true
       })
       api.get(this.data.nextUrl)
         .then(res => {
@@ -71,7 +75,7 @@ Page({
           this.setData({
             data: this.data.data.concat(res.data.results),
             nextUrl: res.data.next,
-            isHideLoadMore: true
+            loading: false
           });
         })
     }
