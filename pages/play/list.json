@@ -1,3 +1,4 @@
 {
-  "navigationBarTitleText": "玩法"
+  "navigationBarTitleText": "玩法",
+  "enablePullDownRefresh": true
 }

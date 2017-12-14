@@ -6,6 +6,7 @@ Page({
     systemInfo: {},
     _api: {},
     list: [],
+    isHideLoadMore: false,
     nextUrl: ''
   },
 
@@ -46,12 +47,16 @@ Page({
   onReachBottom() {
     wx.showNavigationBarLoading();
     if (!!this.data.nextUrl) {
+      this.setData({
+        isHideLoadMore: false
+      })
       api.get(this.data.nextUrl)
         .then(res => {
           wx.hideNavigationBarLoading();
           this.setData({
             data: this.data.data.concat(res.data.results),
-            nextUrl: res.data.next
+            nextUrl: res.data.next,
+            isHideLoadMore: true
           });
         })
     }

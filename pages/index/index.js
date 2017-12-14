@@ -41,9 +41,6 @@ Page({
     });
   },
 
-  /**
-   * 下拉刷新
-   */
   onPullDownRefresh () {
     wx.showNavigationBarLoading();
     api.get(api.HOST + api.HOME)

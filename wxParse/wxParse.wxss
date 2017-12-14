@@ -80,6 +80,7 @@ view{
     color: #1abc9c;
     word-break:break-all;
     overflow:auto;
+    padding:0 5rpx;
 }
 
 .wxParse-p{
@@ -131,6 +132,7 @@ view{
     background-color: #f8f8f8;
     border-radius: 4px;
     margin: 1em 0;
+    padding:0 10rpx;
 }
 
 .wxParse-pre .wxParse-wxxxcode-style .wxParse-inline {
