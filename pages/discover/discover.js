@@ -32,9 +32,5 @@ Page({
     that.setData({
       _api: api
     })
-  },
-
-  onPullDownRefresh () {
-    wx.stopPullDownRefresh()
-  },
+  }
 })
