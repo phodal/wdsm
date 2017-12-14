@@ -1,7 +1,7 @@
 <view class="container">
   <view class="section">
     <view wx:for="{{category}}" wx:if="{{category}}" wx:key="idx" wx:for-index="idx">
-      <view data-slug="{{category[idx].slug}}" class="keyword" bindtap="onItemClick">
+      <view data-title="{{category[idx].title}}" data-slug="{{category[idx].slug}}" class="keyword" bindtap="onItemClick">
         <text>{{category[idx].title}}</text>
       </view>
     </view>

@@ -19,8 +19,14 @@ Page({
     });
 
     let defaultUrl =  api.HOST_PLAY;
-    if(options && options.url) {
-        defaultUrl = options.url;
+    if(options && options.category) {
+        defaultUrl = `${api.HOST_PLAY}?category=${options.category}`;
+    }
+
+    if(options && options.title) {
+      wx.setNavigationBarTitle({
+        title: options.title
+      })
     }
 
     that.setData({

@@ -1,4 +1,4 @@
-<scroll-view class="latest-item-container"  scroll-y="true">
+<scroll-view class="latest-item-container" scroll-y="true">
   <block wx:for="{{data}}" wx:key="idx" wx:for-index="idx">
     <view data-row-id="{{data[idx].id}}" bindtap="onItemClick" class="play-item">
       <view class="vol-meta">

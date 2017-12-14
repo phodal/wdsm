@@ -36,9 +36,10 @@ Page({
   },
 
   onItemClick(e) {
-    let categoryUrl = e.currentTarget.dataset.slug;
+    let slug = e.currentTarget.dataset.slug;
+    let title = e.currentTarget.dataset.title;
     wx.navigateTo({
-      url: '/pages/list/list?url=' + `${api.HOST_PLAY}?category=${categoryUrl}`
+      url: `/pages/list/list?title=${title}&category=${slug}`
     })
   },
 })
