@@ -41,6 +41,7 @@ Page({
             return [year, month, day].join('-');
           }
           that.setData({
+            rowId: options.rowId,
             isLoading: false,
             data: res.data,
             publishDate: formatDate(res.data.updated)
@@ -57,6 +58,16 @@ Page({
     wx.navigateTo({
       url: '/pages/play-detail/play-detail?rowId=' + e.currentTarget.dataset.rowId
     })
+  },
+  onShareAppMessage: function (res) {
+    if (res.from === 'button') {
+      // 来自页面内转发按钮
+      console.log(res.target)
+    }
+    return {
+      title: this.data.data.title,
+      path: '/pages/play-detail/play-detail?rowId=' + this.data.rowId
+    }
   },
   onPullDownRefresh () {
     wx.stopPullDownRefresh()

@@ -46,7 +46,15 @@ Page({
       currentNavbar: e.currentTarget.dataset.idx
     });
   },
-
+  onShareAppMessage: function (res) {
+    if (res.from === 'button') {
+      console.log(res.target)
+    }
+    return {
+      title: '来，一起玩点什么',
+      path: '/pages/index/index'
+    }
+  },
   onPullDownRefresh() {
     wx.showNavigationBarLoading();
     api.get(api.HOST + api.HOME)
