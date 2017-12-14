@@ -7,7 +7,8 @@
     "pages/login/login",
     "pages/play/play",
     "pages/search/search",
-    "pages/list/list"
+    "pages/list/list",
+    "pages/info/info"
   ],
   "window": {
     "backgroundTextStyle": "dark",
@@ -39,6 +40,12 @@
         "iconPath": "images/explore_black.png",
         "selectedIconPath": "images/explore.png",
         "text": "发现"
+      },
+      {
+        "pagePath": "pages/info/info",
+        "iconPath": "images/info_black.png",
+        "selectedIconPath": "images/info.png",
+        "text": "关于"
       }
     ]
   },
