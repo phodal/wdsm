@@ -9,7 +9,6 @@ Page({
 
   onLoad() {
     var that = this;
-    this.getKeywords();
 
     WxSearch.init(that, 43, ['精选', '智能家居', 'AI', '智能音箱', '物联网', '自动驾驶']);
     WxSearch.initMindKeys(this.data.keywords);
