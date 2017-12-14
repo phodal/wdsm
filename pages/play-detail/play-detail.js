@@ -13,7 +13,7 @@ Page({
   },
 
   onLoad: function (options) {
-    var that = this;
+    let that = this;
     app.getSystemInfo(function(res) {
       that.setData({
         systemInfo: res
@@ -24,7 +24,7 @@ Page({
       _api: api
     });
     if (options === null || options.rowId === null) {
-      return
+      return;
     } else {
       api.get(`${api.HOST_PLAY}${options.rowId}`)
         .then(res => {
@@ -43,7 +43,7 @@ Page({
             data: res.data,
             publishDate: formatDate(res.data.updated)
           });
-          var html = converter.makeHtml(res.data.content);
+          let html = converter.makeHtml(res.data.content);
           WxParse.wxParse('article', 'html', html, that, 5);
         });
     }

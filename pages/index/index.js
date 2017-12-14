@@ -14,9 +14,9 @@ Page({
     latest_last_id: 0
   },
 
-  onLoad () {
+  onLoad() {
     var that = this;
-    app.getSystemInfo(function(res) {
+    app.getSystemInfo(function (res) {
       that.setData({
         systemInfo: res
       })
@@ -29,9 +29,9 @@ Page({
     this.onPullDownRefresh();
   },
 
-  onItemClick (e) {
+  onItemClick(e) {
     wx.navigateTo({
-      url: '/pages/work-detail/work-detail?rowId=' + e.currentTarget.dataset.rowId
+      url: '/pages/play-detail/play-detail?rowId=' + e.currentTarget.dataset.rowId
     })
   },
 
@@ -41,14 +41,21 @@ Page({
     })
   },
 
-  switchNav (e) {
+  switchNav(e) {
     this.setData({
       currentNavbar: e.currentTarget.dataset.idx
     });
   },
 
-  onPullDownRefresh () {
-   
-   
+  onPullDownRefresh() {
+    wx.showNavigationBarLoading();
+    api.get(api.HOST + api.HOME)
+      .then(res => {
+        this.setData({
+          data: res.data
+        });
+        wx.hideNavigationBarLoading();
+        wx.stopPullDownRefresh()
+      })
   }
 });
