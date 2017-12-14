@@ -9,6 +9,7 @@ Page({
   data: {
     systemInfo: {},
     _api: {},
+    isLoading: true,
     data: {}
   },
 
@@ -40,6 +41,7 @@ Page({
             return [year, month, day].join('-');
           }
           that.setData({
+            isLoading: false,
             data: res.data,
             publishDate: formatDate(res.data.updated)
           });

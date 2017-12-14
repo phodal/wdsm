@@ -16,7 +16,7 @@
     </view>
   </view>
 
-  <view class="related">
+  <view class="related" wx:if="{{data.related_posts}}" >
     <view class="related-text">
       <text>相关玩法</text>
     </view>
@@ -30,3 +30,8 @@
     </block>
     </view>
 </view>
+
+  <view class="weui-loadmore" wx:if="{{isLoading}}">
+    <view class="weui-loading"></view>
+    <view class="weui-loadmore__tips">正在加载</view>
+  </view>
