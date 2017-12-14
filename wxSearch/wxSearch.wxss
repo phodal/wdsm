@@ -39,11 +39,11 @@
 
 
 .wxSearchMindKeyItem{
-  padding: 10px 5px;
+  padding:5px 10px;
   border-bottom: 1px solid #eee;
   display: flex;
   font-size: 14px;
-  color: cornflowerblue;
+  color: #384452;
 }
 
 .wxSearchKeyList{
@@ -51,7 +51,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   padding-left:7px;
-  
+
 }
 
 .wxSearchKeyItem{
