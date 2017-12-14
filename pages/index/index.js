@@ -48,14 +48,7 @@ Page({
   },
 
   onPullDownRefresh () {
-    wx.showNavigationBarLoading();
-    api.get(api.HOST + api.HOME)
-      .then(res => {
-        this.setData({
-          data: res.data
-        });
-        wx.hideNavigationBarLoading();
-        wx.stopPullDownRefresh()
-      })
+   
+   
   }
 });

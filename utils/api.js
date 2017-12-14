@@ -9,6 +9,7 @@ module.exports = {
   HOST_WORK: 'https://www.wandianshenme.com/api/',
   HOST_HEAD: 'https://www.wandianshenme.com/api/',
   HOT: 'home',
+  KEYWORD: 'keyword/',
   HOME: 'home',
   LATEST: 'home',
 

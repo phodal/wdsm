@@ -51,6 +51,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   padding-left:7px;
+  
 }
 
 .wxSearchKeyItem{
