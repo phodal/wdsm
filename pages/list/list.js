@@ -71,12 +71,12 @@ Page({
       })
       api.get(this.data.nextUrl)
         .then(res => {
-          wx.hideNavigationBarLoading();
           this.setData({
             data: this.data.data.concat(res.data.results),
             nextUrl: res.data.next,
             loading: false
           });
+          wx.hideNavigationBarLoading();
         })
     }
   }
