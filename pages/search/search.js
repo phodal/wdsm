@@ -1,6 +1,5 @@
 var api = require('../../utils/api.js');
 var WxSearch = require('../../wxSearch/wxSearch.js');
-var app = getApp();
 
 Page({
   data: {
@@ -37,6 +36,9 @@ Page({
     let that = this;
     WxSearch.wxSearchKeyTap(e, that);
     let keyword = e.target.dataset.key;
+    wx.navigateTo({
+        url: '/pages/play-detail/play-detail?url=' + api.HOST_SEARCH + keyword
+    })
     console.log('wxSearchKeyTap:' + JSON.stringify(keyword));
   },
   wxSearchDeleteKey: function (e) {

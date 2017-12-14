@@ -10,7 +10,7 @@ Page({
     nextUrl: ''
   },
 
-  onLoad() {
+  onLoad(options) {
     var that = this;
     app.getSystemInfo(function (res) {
       that.setData({
@@ -18,8 +18,14 @@ Page({
       })
     });
 
+    let defaultUrl =  api.HOST_PLAY;
+    if(options && options.url) {
+        defaultUrl = options.url;
+    }
+
     that.setData({
-      _api: api
+      _api: api,
+      defaultUrl: defaultUrl
     });
 
     this.onPullDownRefresh()
@@ -33,7 +39,7 @@ Page({
 
   onPullDownRefresh() {
     wx.showNavigationBarLoading();
-    api.get(api.HOST_PLAY)
+      api.get(this.data.defaultUrl)
       .then(res => {
         this.setData({
           data: res.data.results,
@@ -46,8 +52,6 @@ Page({
 
   onReachBottom() {
     wx.showNavigationBarLoading();
-    console.log("-----");
-    console.log(this.data.nextUrl);
     if (!!this.data.nextUrl) {
       this.setData({
         isHideLoadMore: false
