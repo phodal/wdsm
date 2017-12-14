@@ -2,7 +2,7 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/work-detail/work-detail",
+    "pages/play-detail/play-detail",
     "pages/discover/discover",
     "pages/setting/setting",
     "pages/login/login",

@@ -51,7 +51,7 @@ Page({
 
   onItemClick(e) {
     wx.navigateTo({
-      url: '/pages/work-detail/work-detail?rowId=' + e.currentTarget.dataset.rowId
+      url: '/pages/play-detail/play-detail?rowId=' + e.currentTarget.dataset.rowId
     })
   },
   onPullDownRefresh () {
