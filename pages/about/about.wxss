@@ -1,1 +1,36 @@
-/* pages/about/about.wxss */
+.container {
+    background: #fff;
+    background-size: cover;
+}
+
+.section {
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+}
+.item {
+    box-sizing: border-box;
+    font-size: 14px;
+    margin: 20px auto 0;
+    padding: 5px 15px;
+    width: 100px;
+    height: 36px;
+    line-height: 36px;
+    background: rgba(255,255,255,.5);
+    display: flex;
+    border-radius: 5px;
+}
+.icon {
+    width: 25px;
+    height: 25px;
+}
+
+.login {
+    width: 100px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+    background: #384452;
+    border: 1px solid transparent;
+    color: #fff;
+}

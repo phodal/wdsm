@@ -15,6 +15,19 @@ Page({
   
   },
 
+  onItemClick: function (e) {
+    var targetUrl = '/pages/qrcode/qrcode?pay=' + e.currentTarget.dataset.pay
+    wx.navigateTo({
+      url: targetUrl
+    })
+  },
+
+  login() {
+    wx.navigateTo({
+      url: '/pages/login/login'
+    })
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
