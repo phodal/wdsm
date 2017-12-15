@@ -3,7 +3,6 @@
     "pages/index/index",
     "pages/play-detail/play-detail",
     "pages/discover/discover",
-    "pages/setting/setting",
     "pages/login/login",
     "pages/play/play",
     "pages/search/search",
