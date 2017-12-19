@@ -1,7 +1,10 @@
 <view class="container">
   <view class="section">
-    <view bindtap="login">
+    <view bindtap="login" wx:if="{{!isLogin}}">
       <button class="login">登 录</button>
+    </view>
+    <view class="user-info" wx:if="{{isLogin}}">
+      <text class="user">{{username}}</text>
     </view>
   </view>
 </view>

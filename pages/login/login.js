@@ -15,8 +15,8 @@ Page({
     api.post('https://www.wandianshenme.com/api/api-auth/', e.detail.value)
       .then(res => {
         let data = res.data;
-        if (data.token) {
-          const _token = JSON.stringify(token);
+        if (!!data.token) {
+          const _token = JSON.stringify(data.token);
           wx.setStorageSync('jwt', _token);
           wx.navigateBack();
           wx.showToast({

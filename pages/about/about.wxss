@@ -4,9 +4,9 @@
 }
 
 .section {
-    display:flex;
-flex-direction:column;
-background-color:#384452;
+  display:flex;
+  flex-direction:column;
+  background-color:#384452;
   width:100%;
   height:180rpx;
 }
@@ -31,4 +31,18 @@ background-color:#384452;
     background:#384452;
     border:1px solid #fff;
     color:#fff;
+}
+
+.user-info {
+  display:flex;
+  width: 100%;
+}
+
+.user {
+  text-align:center;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  margin:0 auto;
+  margin-top:1em;
 }

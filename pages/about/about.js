@@ -5,21 +5,32 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    isLogin: false,
+    username: '',
+    email: ''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
-  },
+    let jwt = wx.getStorageSync('jwt');
+    function parseJwt(token) {
+      var base64Url = token.split('.')[1];
+      var base64 = base64Url.replace('-', '+').replace('_', '/');
+      return JSON.parse(atob(base64));
+    };
 
-  onItemClick: function (e) {
-    var targetUrl = '/pages/qrcode/qrcode?pay=' + e.currentTarget.dataset.pay
-    wx.navigateTo({
-      url: targetUrl
-    })
+    if(!!jwt) {
+      let userInfo = parseJwt(jwt);
+      let username = userInfo.username;
+      let email = userInfo.email;
+      this.setData({
+        isLogin: true,
+        username: username,
+        email: email
+      })
+    }
   },
 
   login() {
@@ -28,51 +39,6 @@ Page({
     })
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
   onShareAppMessage: function () {
   
   }
