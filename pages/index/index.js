@@ -30,6 +30,7 @@ Page({
   },
 
   onItemClick(e) {
+    console.log(e.currentTarget.dataset);
     wx.navigateTo({
       url: '/pages/play-detail/play-detail?rowId=' + e.currentTarget.dataset.rowId
     })

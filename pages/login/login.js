@@ -12,10 +12,17 @@ Page({
   },
 
   formSubmit: function(e) {
-    console.log(api.json2Form(e.detail.value))
-    api.post('http://ios1.artand.cn/login/doLogin', api.json2Form(e.detail.value))
+    api.post('https://www.wandianshenme.com/api/api-auth/', e.detail.value)
       .then(res => {
-        console.log(res)
+        let token = res.data;
+        const _token = JSON.stringify(token);
+        wx.setStorageSync('jwt', _token);
+        wx.navigateBack();
+        wx.showToast({
+          title: '登录成功',
+          icon: 'success',
+          duration: 2000
+        })
       })
   }
 })
